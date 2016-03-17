@@ -351,8 +351,10 @@
 		var image = function (imageElement) {
 			_readyCb = function () {
 				try {
-					var w = imageElement.width;
-					var h = imageElement.height;
+//					var w = imageElement.width;
+//					var h = imageElement.height;
+					var w = imageElement.clientWidth;
+					var h = imageElement.clientHeight;
 					var newImg = document.createElement('img');
 					var ratio = (w / _w < h / _h) ? (w / _w) : (h / _h);
 					newImg.setAttribute('crossOrigin', 'anonymous');
